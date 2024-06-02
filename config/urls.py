@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from django_docker_app import views
+from django_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 # Add Start 2024/06/02
     path('', views.index, name='index'), 
-    path('django_docker_app/', include('django_docker_app.urls'))
+    path('django_app/', include('django_app.urls'))
 # Add End   2024/06/02
 ]

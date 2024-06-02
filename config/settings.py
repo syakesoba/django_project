@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 作成したapp追加（app名を変更した場合、修正）
-    'django_docker_app' # Add 2024/06/02
+    'django_app' # Add 2024/06/02
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_docker_app.urls'
+ROOT_URLCONF = 'django_app.urls'
 
 TEMPLATES = [
     {
