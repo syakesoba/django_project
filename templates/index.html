@@ -1,12 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>テストタイトル</title>
-    </head>
+<!-- Add FIle 2024/06/02 -->
+<!-- Add Start 2024/06/03 -->
+{% extends "base.html" %}
 
-    <body>
-        <h1>見出し１</h1>
-        {{ temp_str }}
-    </body>
-</html>
+{% block title %}
+一覧を表示する予定
+{% endblock title %}
+
+{% block content %}
+<h3>一覧表示</h3>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>作品名</th>
+            <th>著者名</th>
+            <th>ジャンル</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>
+              <a href="{% url 'django_app:detail' id=book.book_id %}">{{ book.author_id }}</a>
+            </td>
+            <td>{{ book.genre_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- ページネーションをここに入れる -->
+
+{% endblock content %}
+
+<!-- jsを入れる -->
+{% block script %}
+{% endblock %}
+<!-- Add End   2024/06/03 -->
