@@ -14,8 +14,8 @@ urlpatterns = [
 # Update End   2024/06/05
 # Add Start 2024/06/05
     path('book/add/', views.edit, name='add'),
-    path('book/edit/(?P<id>\d+)/', views.edit, name='edit'),
-    path('book/delete/(?P<id>\d+)/', views.delete, name='delete'),
-    path('book/detail/(?P<id>\d+)/', views.detail, name='detail'),
+    path('book/edit/(<id>)/', views.edit, name='edit'),
+    path('book/delete/(<id>)/', views.delete, name='delete'),
+    path('book/detail/(<id>)/', views.detail, name='detail'),
 # Add End   2024/06/05
 ]
