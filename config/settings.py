@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_app' # Add 2024/06/02
+    'django_app.apps.DjangoAppConfig' # Add 2024/06/02
 ]
 
 MIDDLEWARE = [

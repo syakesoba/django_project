@@ -28,7 +28,7 @@ urlpatterns = [
 # Uodate Start 2024/06/05
 # Update Start 2024/06/03
 #    path('django_app/', include('django_app.urls'))
-    path('django_app/', include('django_app.urls', namespace='django_app'))
+    path('', include('django_app.urls', namespace='django_app'))
 # Update End   2024/06/03
 # Add End   2024/06/02
 ]

@@ -38,4 +38,9 @@ def edit(request, id=None):
         form = BookForm(instance=book)
 
     return render(request, 'book/edit.html', dict(form=form, id=id))
+
+def delete(request, id):
+    book = get_object_or_404(Book, pk=id)
+    book.delete()
+    return redirect('django_app:index')
 # Add End   2024/06/05

@@ -20,10 +20,10 @@
     <tbody>
         {% for book in books %}
         <tr>
-            <td>{{ book.title }}</td>
             <td>
-              <a>{{ book.author_id }}</a>
+                <a href="{% url 'detail' id=book.book_id %}">{{ book.title }}</a>
             </td>
+            <td>{{ book.author_id }}</td>
             <td>{{ book.genre_id }}</td>
         </tr>
         {% endfor %}
