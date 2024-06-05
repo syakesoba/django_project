@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 作成したapp追加（app名を変更した場合、修正）
+    'django.contrib.sites',
     'django_app' # Add 2024/06/02
 ]
 

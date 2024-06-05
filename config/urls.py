@@ -22,7 +22,10 @@ from django_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 # Add Start 2024/06/02
-    path('', views.index, name='index'),
+# Uodate Start 2024/06/05
+#    path('', views.index, name='index'),
+    path('book/', views.index, name='index'),
+# Uodate Start 2024/06/05
 # Update Start 2024/06/03
 #    path('django_app/', include('django_app.urls'))
     path('django_app/', include('django_app.urls', namespace='django_app'))

@@ -7,4 +7,4 @@ from django_app.models import Book
 class BookForm(ModelForm):
     class Meta:
         model = Book
-        fields = ('title')
+        fields = ('title', 'author_id', 'genre_id')
