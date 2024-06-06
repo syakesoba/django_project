@@ -23,8 +23,8 @@
             <td>
                 <a href="{% url 'detail' id=book.book_id %}">{{ book.title }}</a>
             </td>
-            <td>{{ book.author_id }}</td>
-            <td>{{ book.genre_id }}</td>
+            <td>{{ book.author.author }}</td>
+            <td>{{ book.genre.genre }}</td>
         </tr>
         {% endfor %}
     </tbody>

@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
 from django_app.forms import BookForm
@@ -9,10 +8,18 @@ from django_app.models import Book
 # Add Start 2024/06/02
 def index(request):
 # Add Start 2024/06/03
-    books = Book.objects.all().order_by('book_id') # 値を取得
+# Update Start 2024/06/06
+#    books = Book.objects.all().order_by('book_id')
+    books = Book.objects.select_related('author', 'genre').order_by('book_id')
+# Update End   2024/06/06
+# Add Start 2024/06/05
+
+# Add End   2024/06/05
 # Add End   2024/06/03
+# Update Start 2024/06/05
+#    return render(request, '../templates/index.html', {'books':books})
     return render(request, '../templates/index.html', {'books':books})
-# Add End   2024/06/02
+# Update End   2024/06/05
 
 # Add Start 2024/06/03
 def detail(request, id):
