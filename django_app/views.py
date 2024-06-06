@@ -18,13 +18,13 @@ def index(request):
 # Add End   2024/06/03
 # Update Start 2024/06/05
 #    return render(request, '../templates/index.html', {'books':books})
-    return render(request, '../templates/index.html', {'books':books})
+    return render(request, '../templates/main/index.html', {'books':books})
 # Update End   2024/06/05
 
 # Add Start 2024/06/03
-def detail(request, id):
-    test_dict = {'temp_str': "This is test String"}    # KEY='temp_str'、VALUE='This is test String' として、html呼び出し時などに渡せる。
-    return render(request, '../templates/detail.html', context=test_dict)    # [html_template] から呼び出し
+def detail(request, id=id):
+    book = get_object_or_404(Book, pk=id)
+    return render(request, '../templates/main/detail.html', {'book':book})
 # Add End   2024/06/03
 
 # Add Start 2024/06/05

@@ -17,7 +17,7 @@ import os # Add 2024/06/02
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # htmlを格納しているフォルダ指定
-HTML_TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates') # Add 2024/06/02
+HTML_TEMPLATE_DIR = os.path.join(BASE_DIR, 'django_app/templates/main') # Add 2024/06/02
 
 
 # Quick-start development settings - unsuitable for production
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_app.apps.DjangoAppConfig' # Add 2024/06/02
+    'bootstrapform', # Add 2024/06/06
+    'django_app.apps.DjangoAppConfig', # Add 2024/06/02
 ]
 
 MIDDLEWARE = [
@@ -145,6 +146,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Add Start 2024/06/06
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+# Add Start 2024/06/06
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
