@@ -31,7 +31,7 @@ def detail(request, id=id):
 def edit(request, id=None):
 
     if id:
-        member = get_object_or_404(Book, pk=id)
+        book = get_object_or_404(Book, pk=id)
     else:
         book = Book()
 
@@ -44,7 +44,7 @@ def edit(request, id=None):
     else:
         form = BookForm(instance=book)
 
-    return render(request, 'book/edit.html', dict(form=form, id=id))
+    return render(request, '../templates/main/edit.html', dict(form=form, id=id))
 
 def delete(request, id):
     book = get_object_or_404(Book, pk=id)

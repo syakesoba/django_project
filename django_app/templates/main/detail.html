@@ -2,10 +2,10 @@
 {% extends "common/base.html" %}
 {% load bootstrap %}
 
-{% block title %}本の詳細{% endblock title %}
+{% block title %}書籍の詳細{% endblock title %}
 
 {% block content %}
-    <h3 class="pb-2 border-bottom">本の詳細情報</h3>
+    <h3 class="pb-2 border-bottom">書籍の詳細情報</h3>
     <h5 class="pb-2 border-bottom">作品名</h5>
         {{ book.title }}
     <h5 class="fw-bold mb-0">著者名</h5>
@@ -14,5 +14,6 @@
         {{ book.genre.genre }}
     <br>
     <br>
+    <a href="{% url 'edit' id=book.book_id %}" class="btn btn-default btn-sm">変更</a>
     <a href="{% url 'index' %}" class="btn btn-default btn-sm">戻る</a>
 {% endblock content %}
